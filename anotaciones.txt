@@ -1,4 +1,0 @@
-"<i class="bi bi-file-person"></i>" icono de persona
-<i class="bi bi-folder-fill"></i> icono de carpeta
-<i class="bi bi-microsoft"></i> icono de windows
-<i class="bi bi-chat-left"></i> icono de mensaje(contacto)
