@@ -12,6 +12,9 @@ body {
     margin: 0;
     padding-bottom: 80px; /* Espacio para que la barra no tape el contenido */
 }
+body.modo-claro {
+    filter: invert(1) hue-rotate(180deg);
+}
 
 h1 {
     font-family: 'Space Grotesk', sans-serif !important;
@@ -56,11 +59,117 @@ h1 {
     transform: translateY(-2px);
 }
 
-/* Ajuste para que cada sección se sienta como un panel único */
+/* EFECTO VENTANA DE SISTEMA OPERATIVO */
 section {
-    min-height: 70vh; /* Ocupa el 70% del alto de la pantalla */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: all 0.3s ease-in-out; /* Transición suave cuando cambie de estado */
+    background: rgba(30, 30, 30, 0.85) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    position: relative;
+    padding-top: 6rem !important; /* Espacio holgado para separar la barra superior */
+}
+
+/* Barra superior estilo ventana de SO */
+section::before {
+    content: "● ● ●";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 32px;
+    background: rgba(50, 50, 50, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    padding-left: 15px;
+    line-height: 32px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #ff5f56;
+}
+
+/* Scroll suave entre secciones */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Efecto Hover en las tarjetas y secciones */
+section, .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover, .card:hover {
+    transform: translateY(-5px); /* Se levanta suavemente */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Efecto Hover en los iconos de habilidades */
+.d-flex.flex-column i {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.d-flex.flex-column:hover i {
+    transform: scale(1.2) rotate(5deg); /* Agranda y gira levemente el icono */
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+}
+
+/* 1. Transiciones globales súper suaves (Estilo Framer) */
+* {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 2. Animación de entrada al cargar la página */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Delay escalonado para que las secciones aparezcan de a una */
+#sobre-mi { animation-delay: 0.1s; }
+#proyectos { animation-delay: 0.3s; }
+#contacto { animation-delay: 0.5s; }
+
+/* 3. Efecto de tarjeta con brillo / resplandor al pasar el mouse */
+.card, section {
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    background: rgba(20, 20, 20, 0.75) !important;
+}
+
+.card:hover, section:hover {
+    transform: translateY(-6px) scale(1.01) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.05) !important;
+}
+
+/* 4. Animación moderna para los iconos de tus proyectos/habilidades */
+.d-flex.flex-column i, .bi {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.d-flex.flex-column:hover i {
+    transform: translateY(-5px) scale(1.25);
+}
+
+/* 5. Botones estilo Framer (se agranda suavemente al clickear o pasar el mouse) */
+.btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.95);
 }
