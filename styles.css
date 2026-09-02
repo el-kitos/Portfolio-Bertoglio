@@ -151,6 +151,31 @@ section {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.05) !important;
 }
 
+/* Capturas de los proyectos */
+.mastacards-card,
+.bertoglio-music-card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.mastacards-card {
+    background-image: linear-gradient(rgba(5, 15, 8, 0.78), rgba(5, 15, 8, 0.9)), url("assets/blackjack.png") !important;
+    background-position: center;
+}
+
+.bertoglio-music-card {
+    background-image: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.92)), url("assets/spotify.png") !important;
+    background-position: center;
+}
+
+.mastacards-card .card-body,
+.bertoglio-music-card .card-body {
+    position: relative;
+    z-index: 1;
+    min-height: 280px;
+}
+
 /* 4. Animación moderna para los iconos de tus proyectos/habilidades */
 .d-flex.flex-column i, .bi {
     display: inline-block;
