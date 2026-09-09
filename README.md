@@ -40,36 +40,6 @@ Repositorio: [Perfil de el-kitos en GitHub](https://github.com/el-kitos)
 - Google Fonts
 - JavaScript incluido en el HTML para el cambio de tema
 
-## Estructura del proyecto
-
-```text
-Portfolio Bertoglio/
-├── index.html
-├── styles.css
-├── README.md
-├── anotaciones.txt
-├── cv-marcos-bertoglio.pdf
-└── assets/
-    ├── blackjack.png
-    ├── spotify.png
-    ├── idea.png
-    └── wallpapersden.com_minimalist-black-digital-blend_3840x2160 (1).jpg
-```
-
-## Cómo ejecutar el portfolio
-
-No requiere instalación de dependencias ni un servidor backend.
-
-1. Descargá o cloná este repositorio.
-2. Abrí el archivo `index.html` en un navegador web.
-
-También podés utilizar la extensión **Live Server** de Visual Studio Code para visualizar los cambios automáticamente mientras editás el proyecto.
-
-## Contacto
-
-- Instagram: [@marcos.bertoglio](https://www.instagram.com/marcos.bertoglio/)
-- GitHub: [el-kitos](https://github.com/el-kitos)
-
 ## Autor
 
 **Marcos Bertoglio**  
